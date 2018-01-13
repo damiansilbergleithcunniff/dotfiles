@@ -4,7 +4,7 @@ PWD=`pwd`
 
 echo 'installing ssh authorized keys'
 #godaddy macbook
-cat ./ssh/id_rsa_gdmbp.pub >> ~/.ssh/authorized_keys
+cat ./.ssh/id_rsa_gdmbp.pub >> ~/.ssh/authorized_keys
 
 echo 'symlink all our dotfiles'
 ln -s $PWD/.tmux.conf ~/
