@@ -16,5 +16,5 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
 # we need to make sure that tmux is installed
-sudo yum -y install tmux
+brew install tmux
 
