@@ -20,3 +20,9 @@ fi
 export SDKMAN_DIR="/Users/dsilbergleithcu/.sdkman"
 [[ -s "/Users/dsilbergleithcu/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/dsilbergleithcu/.sdkman/bin/sdkman-init.sh"
 source ~/.bashrc
+# Golang env
+export GOPATH=/Users/dsilbergleithcu/Code/go
+export GOROOT=/usr/local/opt/go/libexec
+export GOBIN=/Users/dsilbergleithcu/Code/go/bin
+# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
