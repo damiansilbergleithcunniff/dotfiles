@@ -36,6 +36,18 @@ Plugin 'git://git.wincent.com/command-t.git'
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
+" Plugin for code folding https://realpython.com/vim-and-python-a-match-made-in-heaven/
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+" search
+Plugin 'kien/ctrlp.vim'
+" status bar
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -54,3 +66,27 @@ filetype plugin indent on    " required
 autocmd FileType yaml set filetype=ansible
 autocmd FileType yml set filetype=ansible
 
+" ---- IDE: https://realpython.com/vim-and-python-a-match-made-in-heaven/
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-W>+ <C-W>_<C-W>\|
+" fix splits to be more natural
+set splitbelow
+set splitright
+"
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+" Enable folding with the spacebar
+nnoremap <space> za
+" show docstrings for folded code
+let g:SimpylFold_docstring_preview=1
+" use system clipboard
+set clipboard=unnamed
+" bind key control-n for NerdTree
+map <C-n> :NERDTreeToggle<CR>
+" fix color issues with powerline
+set term=screen-256color
