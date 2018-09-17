@@ -90,3 +90,7 @@ set clipboard=unnamed
 map <C-n> :NERDTreeToggle<CR>
 " fix color issues with powerline
 set term=screen-256color
+" Always show the status bar
+set laststatus=2
+" turn on mouse scrolling
+set mouse=a
