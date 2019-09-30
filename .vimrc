@@ -47,6 +47,9 @@ Plugin 'kien/ctrlp.vim'
 " status bar
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
+" colorschemes: https://github.com/flazz/vim-colorschemes
+Plugin 'flazz/vim-colorschemes'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -94,3 +97,12 @@ set term=screen-256color
 set laststatus=2
 " turn on mouse scrolling
 set mouse=a
+
+" https://jeffkreeftmeijer.com/vim-number/
+" sets hybrid numbers and some auto toggles too
+:set number relativenumber
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
